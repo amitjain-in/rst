@@ -1,6 +1,5 @@
 use std::cmp::Ordering;
 use std::io;
-use std::ops::Add;
 
 use rand::Rng;
 
@@ -32,7 +31,7 @@ pub fn guessing_game() {
         match guess.cmp(&random) {
             Ordering::Equal => {
                 tries = tries + 1;
-                println!("Correct guess after {} tries", tries);
+                println!("Correct guess after {} trie(s)", tries);
                 break;
             }
             Ordering::Less => {
