@@ -6,6 +6,10 @@ pub fn if_cond(a: i32) {
     } else {
         println!("a is {}", a);
     }
+
+    let is_divisible_by_2 = if a % 2 == 0 { true } else { false };//tertiary way of doing if
+
+    println!("a is {} and a is_divisible_by_2 {}", a, is_divisible_by_2);
 }
 
 pub fn for_loop() {
@@ -21,9 +25,14 @@ pub fn for_loop() {
     }
 }
 
-// pub fn loop_loop() {
-//     let a = [1, 2, 3, 5, 6];
-//     loop {
-//
-//     }
-// }
+pub fn loop_loop() {
+    let a = [1, 2, 3, 5, 6];
+    let mut cnt: usize = 0;
+
+    loop {//like while loop without condition
+        if a[cnt] % 3 == 0 {
+            break;
+        }
+        cnt += 1;
+    }
+}
